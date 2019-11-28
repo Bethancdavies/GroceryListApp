@@ -227,12 +227,12 @@ html {
 /* basic stripping and styling */
 html {
   font-size: 62.5%;
-  background: linear-gradient(to right, #09d692, #f3f9a7);
+  background: lightcyan;
   text-align: center;
 }
 
 .wrapper {
-  width: 980px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -244,17 +244,31 @@ h1 {
 
 /* header styling */
 
-/* output box styling */
-.Box {
-  border: 1 px white solid;
-  width: 40%;
-  height: 500px;
-  background-color: red;
+fieldset {
+  border: none;
+  padding: 20px;
 }
 
+/* output box styling */
+.Output {
+  border: 1 px white solid;
+  margin: 0 auto;
+  height: 70vh;
+}
+h3 {
+  padding: 0;
+  margin: 0;
+}
 .flex {
   display: flex;
   justify-content: space-between;
+}
+ul {
+  border: black 2px solid;
+  height: 60px;
+  /* width: 80vw; */
+  margin: 0 auto;
+  columns: 3;
 }
 .flexcolumn {
   display: flex;
