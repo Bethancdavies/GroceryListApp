@@ -227,7 +227,9 @@ html {
 /* basic stripping and styling */
 html {
   font-size: 62.5%;
-  background: lightcyan;
+  background: url(./assets/7546.jpg);
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+  background-size: cover;
   text-align: center;
 }
 
@@ -247,6 +249,7 @@ h1 {
 fieldset {
   border: none;
   padding: 20px;
+  text-align: center;
 }
 
 /* output box styling */

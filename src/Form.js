@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import firebase from "./firebase";
 
 class Form extends Component {
+  // SETS STATE OF INPUTS BY USER
   constructor() {
     super();
     this.state = {
       itemName: "",
       category: "",
-      id: ""
-      // how to get this category to respond to the radio button chosen, idea is to collect 6 seperate arrays....
+      newItemsArray: []
     };
   }
 
@@ -16,21 +16,22 @@ class Form extends Component {
     const dbRef = firebase.database().ref();
     dbRef.on("value", snapshot => {
       const groceryItems = snapshot.val();
+      const newItems = [];
 
-      const newGroceryItems = [];
       for (let key in groceryItems) {
-        const newGroceryItemObject = {
-          id: key
+        const individualGroceryItem = {
+          id: key,
+          groceryItem: groceryItems[key]
         };
-        // console.log(groceryItems[key]);
-        // groceryItems[key].update({
-        //   id: key
-        // });
-        newGroceryItems.push(newGroceryItemObject);
+        newItems.push(individualGroceryItem);
+        // console.log(newItems);
       }
+      this.setState({
+        newItemsArray: newItems
+      });
     });
   }
-
+  // ON SUBMIT ITEM NAME AND CATEGORY ARE SENT TO FIREBASE
   handleFormSubmit = event => {
     event.preventDefault();
 
@@ -40,14 +41,16 @@ class Form extends Component {
       category: this.state.category
     });
 
+    // console.log(newItems);
     // get all the values and submit to firebase
   };
-
+  // ASSESSES WHICH RADIO BUTTON IS CLICKED
   handleChangeRadio = event => {
     this.setState({
       category: event.target.value
     });
   };
+  // ESTABLISHES A CHANGE IN THE TEXT INPUT
   handleChangeText = event => {
     this.setState({
       itemName: event.target.value
@@ -55,9 +58,15 @@ class Form extends Component {
   };
 
   render() {
+    console.log(this.state.newItemsArray);
     return (
       <form>
-        <input type="text" name="userInput" onChange={this.handleChangeText} />
+        <input
+          type="text"
+          name="userInput"
+          autoComplete="off"
+          onChange={this.handleChangeText}
+        />
         <fieldset>
           <legend>Select a category below</legend>
           <label>Meat</label>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import Form from "./Form";
 
 class Output extends Component {
   render() {
@@ -6,7 +7,9 @@ class Output extends Component {
       <div className="Output">
         <h2>Your List</h2>
         <h3>Meats</h3>
-        <ul></ul>
+        <ul>
+          <li></li>
+        </ul>
         <h3>Fruits and vegeatables</h3>
         <ul></ul>
         <h3>Dairy </h3>
