@@ -253,7 +253,7 @@ fieldset {
 }
 
 /* output box styling */
-.Output {
+.GroceryList {
   border: 1 px white solid;
   margin: 0 auto;
   height: 70vh;
@@ -272,6 +272,8 @@ ul {
   /* width: 80vw; */
   margin: 0 auto;
   columns: 3;
+  padding: 0;
+  list-style: none;
 }
 .flexcolumn {
   display: flex;
