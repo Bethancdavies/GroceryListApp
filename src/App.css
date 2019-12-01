@@ -223,59 +223,160 @@ html {
 }
 
 /* end of set up */
-@import url("https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
 /* basic stripping and styling */
+* {
+  /* border: red 1px solid; */
+  font-family: "Josefin Sans", sans-serif;
+}
+
 html {
   font-size: 62.5%;
-  background: url(./assets/7546.jpg);
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+body {
+  background-color: #d8d8d8;
+  background-image: url(./assets/7546.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+
+  height: 100vh;
+  max-width: 100vw;
 }
 
 .wrapper {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
-
-/* font styles */
-h1 {
-  font-family: "ZCOOL KuaiLe", cursive;
-  font-size: 4rem;
-}
-
-/* header styling */
-
-fieldset {
-  border: none;
-  padding: 20px;
-  text-align: center;
-}
-
-/* output box styling */
-.GroceryList {
-  border: 1 px white solid;
-  margin: 0 auto;
-  height: 70vh;
-}
-h3 {
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   padding: 0;
   margin: 0;
 }
+/* font styles */
+h1 {
+  font-size: 4rem;
+  padding: 10px 0;
+  text-shadow: 2px 2px white;
+}
+h2 {
+  font-size: 2.5rem;
+  padding: 10px 0;
+  text-decoration: underline;
+  margin-top: 100px;
+}
+h3 {
+  font-size: 2rem;
+
+  padding: 10px;
+}
+p {
+  font-size: 1.5rem;
+}
+/* header styling */
+header {
+  padding: 10px 0;
+}
+/* Form and input styling */
+/* very indepth CSS as nothing will style unless individually targetteed with fieldsets */
+fieldset {
+  border: none;
+  padding: 5px;
+  text-align: center;
+  width: fit-content;
+  border: 1px black solid;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  border-radius: 6px;
+  border: black 2px solid;
+  box-shadow: none;
+  text-align: center;
+  width: 30vw;
+  height: 5vh;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+legend {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="radio"] {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+}
+button {
+  cursor: pointer;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+button:hover,
+button:focus {
+  background: #dcdcdc;
+  color: black;
+}
+
+/* List Styling */
+
+.groceryList {
+  width: 100vw;
+  min-height: 70vh;
+  max-height: fit-content;
+  background-image: url(./assets/pngkey.com-note-paper-png-938871.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
 }
 ul {
-  border: black 2px solid;
-  height: 60px;
-  /* width: 80vw; */
   margin: 0 auto;
   columns: 3;
   padding: 0;
   list-style: none;
 }
 .flexcolumn {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+.removeSpan {
+  color: black;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+li {
+  font-size: 2rem;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 700;
 }

@@ -6,6 +6,11 @@ import firebase from "./firebase";
 
 import "./App.css";
 
+// things to add :)
+
+// NEEDED (finish by saturday): error handling, styling (ensure list is not off page when a lot of items), delete item on click of span, cross off item on click
+// NICE TO HAVE(finish on sunday fishbowl): Option to print list and send list to email, final styling, quantities, STRETCH GOAL have user be able to login
+
 class App extends Component {
   constructor() {
     super();
@@ -15,6 +20,7 @@ class App extends Component {
       newItemsArray: []
     };
   }
+  // basic functionality of form below, establishing state and updating it as needed
   componentDidMount() {
     const dbRef = firebase.database().ref();
     dbRef.on("value", snapshot => {
@@ -32,6 +38,7 @@ class App extends Component {
       });
     });
   }
+  // handles the form once information is gathered, pushes to the database once the name and category is grabbed from user input
   handleFormSubmit = event => {
     event.preventDefault();
     const dbRef = firebase.database().ref();
@@ -39,17 +46,14 @@ class App extends Component {
       itemName: this.state.itemName,
       category: this.state.category
     });
-
-    // console.log(newItems);
-    // get all the values and submit to firebase
   };
-  // ASSESSES WHICH RADIO BUTTON IS CLICKED
+  // ASSESSES which radio button is clicked and links it to that category that the user has selected, updates state
   handleChangeRadio = event => {
     this.setState({
       category: event.target.value
     });
   };
-  // ESTABLISHES A CHANGE IN THE TEXT INPUT
+  // ASSESSES what was inputted in text by the user and sets it to state
   handleChangeText = event => {
     this.setState({
       itemName: event.target.value
@@ -58,75 +62,94 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <Header />
-        <form>
-          <input
-            type="text"
-            name="userInput"
-            autoComplete="off"
-            onChange={this.handleChangeText}
-          />
-          <fieldset>
-            <legend>Select a category below</legend>
-            <label>Meat</label>
+      // on change/on click handles and returning of other components
+      <body>
+        <div className="wrapper">
+          <Header />
+          <form className="inputForm wrapper">
+            <label className="sr-only">
+              Enter individual grocery item here
+            </label>
             <input
-              type="radio"
-              name="categoryInput"
-              value="meat"
-              checked={this.state.category === "meat"}
-              onChange={this.handleChangeRadio}
+              type="text"
+              name="userInput"
+              autoComplete="off"
+              onChange={this.handleChangeText}
             />
-            <label>Fruit and Vegeatables</label>
-            <input
-              type="radio"
-              name="categoryInput"
-              value="fruitVeg"
-              checked={this.state.category === "fruitVeg"}
-              onChange={this.handleChangeRadio}
-            />
-            <label>Dairy Products</label>
-            <input
-              type="radio"
-              name="categoryInput"
-              value="dairy"
-              checked={this.state.category === "dairy"}
-              onChange={this.handleChangeRadio}
-            />
-            <label>Dry Goods and Pantry Items</label>
-            <input
-              type="radio"
-              name="categoryInput"
-              value="dryGoods"
-              checked={this.state.category === "dryGoods"}
-              onChange={this.handleChangeRadio}
-            />
-            <label>Freezer Items</label>
-            <input
-              type="radio"
-              name="categoryInput"
-              value="freezerItems"
-              checked={this.state.category === "freezerItems"}
-              onChange={this.handleChangeRadio}
-            />
-            <label>Miscellaneous</label>
-            <input
-              type="radio"
-              name="categoryInput"
-              value="misc"
-              checked={this.state.category === "misc"}
-              onChange={this.handleChangeRadio}
-            />
-          </fieldset>
-          <button type="submit" onClick={this.handleFormSubmit}>
-            Submit Item
-          </button>
-        </form>
-        <div className="flex">
-          <GroceryList newItemsArrayProp={this.state.newItemsArray} />
+            <fieldset className="radioButtons">
+              <legend>Select a category below</legend>
+              <div className="flexcolumn">
+                <label>Meat</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="meat"
+                  checked={this.state.category === "meat"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+              <div className="flexcolumn">
+                <label>Produce</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="fruitVeg"
+                  checked={this.state.category === "fruitVeg"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+              <div className="flexcolumn">
+                <label>Dairy Products</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="dairy"
+                  checked={this.state.category === "dairy"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+              <div className="flexcolumn">
+                <label>Pantry Items</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="dryGoods"
+                  checked={this.state.category === "dryGoods"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+              <div className="flexcolumn">
+                <label>Freezer Items</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="freezerItems"
+                  checked={this.state.category === "freezerItems"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+              <div className="flexcolumn">
+                <label>Miscellaneous</label>
+                <input
+                  type="radio"
+                  name="categoryInput"
+                  value="misc"
+                  checked={this.state.category === "misc"}
+                  onChange={this.handleChangeRadio}
+                />
+              </div>
+            </fieldset>
+            <button type="submit" onClick={this.handleFormSubmit}>
+              Submit Item
+            </button>
+          </form>
+          <div className="flex">
+            {/* passing the newItemsArray as a prop to component GroceryList.js */}
+            <GroceryList newItemsArrayProp={this.state.newItemsArray} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </body>
     );
   }
 }
