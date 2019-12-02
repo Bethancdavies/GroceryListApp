@@ -22,7 +22,7 @@ class IndividualItem extends Component {
   render() {
     return (
       <li
-        key={this.props.itemIdProp}
+        Key={this.props.itemIdProp}
         onClick={this.crossOffItem}
         className={this.state.listClass ? "null" : "crossedOut"}
       >
