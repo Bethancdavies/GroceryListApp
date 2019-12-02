@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/GroceryListAppLive/static/css/main.82269532.chunk.css",
-    "main.js": "/GroceryListAppLive/static/js/main.17db4ab9.chunk.js",
-    "main.js.map": "/GroceryListAppLive/static/js/main.17db4ab9.chunk.js.map",
-    "runtime-main.js": "/GroceryListAppLive/static/js/runtime-main.85d7e28a.js",
-    "runtime-main.js.map": "/GroceryListAppLive/static/js/runtime-main.85d7e28a.js.map",
-    "static/js/2.91f741a5.chunk.js": "/GroceryListAppLive/static/js/2.91f741a5.chunk.js",
-    "static/js/2.91f741a5.chunk.js.map": "/GroceryListAppLive/static/js/2.91f741a5.chunk.js.map",
-    "index.html": "/GroceryListAppLive/index.html",
-    "precache-manifest.f2337069ed39f857f29a93ad3ab0fb9d.js": "/GroceryListAppLive/precache-manifest.f2337069ed39f857f29a93ad3ab0fb9d.js",
-    "service-worker.js": "/GroceryListAppLive/service-worker.js",
-    "static/css/main.82269532.chunk.css.map": "/GroceryListAppLive/static/css/main.82269532.chunk.css.map",
-    "static/media/App.css": "/GroceryListAppLive/static/media/background.9260d1f7.jpg"
+    "main.css": "/GroceryListApp/static/css/main.d44f0629.chunk.css",
+    "main.js": "/GroceryListApp/static/js/main.259fbb6d.chunk.js",
+    "main.js.map": "/GroceryListApp/static/js/main.259fbb6d.chunk.js.map",
+    "runtime-main.js": "/GroceryListApp/static/js/runtime-main.236af00c.js",
+    "runtime-main.js.map": "/GroceryListApp/static/js/runtime-main.236af00c.js.map",
+    "static/js/2.e1e9c69d.chunk.js": "/GroceryListApp/static/js/2.e1e9c69d.chunk.js",
+    "static/js/2.e1e9c69d.chunk.js.map": "/GroceryListApp/static/js/2.e1e9c69d.chunk.js.map",
+    "index.html": "/GroceryListApp/index.html",
+    "precache-manifest.755c47629e32d2927f03fa76b84baae6.js": "/GroceryListApp/precache-manifest.755c47629e32d2927f03fa76b84baae6.js",
+    "service-worker.js": "/GroceryListApp/service-worker.js",
+    "static/css/main.d44f0629.chunk.css.map": "/GroceryListApp/static/css/main.d44f0629.chunk.css.map",
+    "static/media/App.css": "/GroceryListApp/static/media/background.9260d1f7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.85d7e28a.js",
-    "static/js/2.91f741a5.chunk.js",
-    "static/css/main.82269532.chunk.css",
-    "static/js/main.17db4ab9.chunk.js"
+    "static/js/runtime-main.236af00c.js",
+    "static/js/2.e1e9c69d.chunk.js",
+    "static/css/main.d44f0629.chunk.css",
+    "static/js/main.259fbb6d.chunk.js"
   ]
 }
