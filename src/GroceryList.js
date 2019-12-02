@@ -109,7 +109,7 @@ class GroceryList extends Component {
           </ul>
         </div>
         {/* clear list button still need to be functional */}
-        <button type="submit" onClick={this.clearList}>
+        <button type="submit" className="clearList" onClick={this.clearList}>
           Clear List
         </button>
       </div>

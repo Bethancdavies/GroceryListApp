@@ -22,7 +22,7 @@ class IndividualItem extends Component {
   render() {
     return (
       <li
-        Key={this.props.itemIdProp}
+        key={this.props.itemIdProp}
         onClick={this.crossOffItem}
         className={this.state.listClass ? "null" : "crossedOut"}
       >
@@ -33,7 +33,7 @@ class IndividualItem extends Component {
           onClick={this.removeItem}
         >
           🗑
-        </span>
+        </span>{" "}
       </li>
     );
   }
