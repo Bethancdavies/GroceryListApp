@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/GroceryListApp/static/css/main.a34ad884.chunk.css",
-    "main.js": "/GroceryListApp/static/js/main.25a2b877.chunk.js",
-    "main.js.map": "/GroceryListApp/static/js/main.25a2b877.chunk.js.map",
+    "main.css": "/GroceryListApp/static/css/main.fe578356.chunk.css",
+    "main.js": "/GroceryListApp/static/js/main.259fbb6d.chunk.js",
+    "main.js.map": "/GroceryListApp/static/js/main.259fbb6d.chunk.js.map",
     "runtime-main.js": "/GroceryListApp/static/js/runtime-main.236af00c.js",
     "runtime-main.js.map": "/GroceryListApp/static/js/runtime-main.236af00c.js.map",
     "static/js/2.e1e9c69d.chunk.js": "/GroceryListApp/static/js/2.e1e9c69d.chunk.js",
     "static/js/2.e1e9c69d.chunk.js.map": "/GroceryListApp/static/js/2.e1e9c69d.chunk.js.map",
     "index.html": "/GroceryListApp/index.html",
-    "precache-manifest.b621a331d032ac27bb22ad790cf8a7f3.js": "/GroceryListApp/precache-manifest.b621a331d032ac27bb22ad790cf8a7f3.js",
+    "precache-manifest.28f61d8554f28aa942901141fb9a5544.js": "/GroceryListApp/precache-manifest.28f61d8554f28aa942901141fb9a5544.js",
     "service-worker.js": "/GroceryListApp/service-worker.js",
-    "static/css/main.a34ad884.chunk.css.map": "/GroceryListApp/static/css/main.a34ad884.chunk.css.map",
-    "static/media/App.css": "/GroceryListApp/static/media/7546.9260d1f7.jpg"
+    "static/css/main.fe578356.chunk.css.map": "/GroceryListApp/static/css/main.fe578356.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.236af00c.js",
     "static/js/2.e1e9c69d.chunk.js",
-    "static/css/main.a34ad884.chunk.css",
-    "static/js/main.25a2b877.chunk.js"
+    "static/css/main.fe578356.chunk.css",
+    "static/js/main.259fbb6d.chunk.js"
   ]
 }
