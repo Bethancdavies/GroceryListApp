@@ -247,7 +247,8 @@ body {
 }
 
 .wrapper {
-  width: 1100px;
+  width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 h1,
@@ -266,10 +267,10 @@ h1 {
   text-shadow: 2px 2px white;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   padding: 10px 0;
   text-decoration: underline;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 h3 {
   font-size: 2rem;
@@ -290,6 +291,7 @@ fieldset {
   padding: 5px;
   text-align: center;
   width: fit-content;
+  max-width: 60vw;
   border: 1px black solid;
   margin: 10px 0;
   border-radius: 6px;
@@ -301,6 +303,7 @@ input[type="text"] {
   box-shadow: none;
   text-align: center;
   width: 30vw;
+  min-width: 250px;
   height: 5vh;
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif;
@@ -323,10 +326,16 @@ input[type="radio"] {
 label {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
+  transition: all 0.3s;
+}
+label:hover,
+label:focus {
+  color: #107515;
 }
 button {
   cursor: pointer;
   width: 20vw;
+  min-width: 175px;
   height: 5vh;
   border-radius: 6px;
   background: black;
@@ -338,19 +347,21 @@ button {
 }
 button:hover,
 button:focus {
-  background: #dcdcdc;
+  background: #107515;
   color: black;
+  outline: #000 1px solid;
 }
 
 /* List Styling */
 
 .groceryList {
-  width: 100vw;
+  width: 100%;
   min-height: 70vh;
   max-height: fit-content;
   background-image: url(./assets/pngkey.com-note-paper-png-938871.png);
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.8;
 }
 
 .flex {
@@ -362,6 +373,8 @@ ul {
   columns: 3;
   padding: 0;
   list-style: none;
+  display: inline-block;
+  width: 100%;
 }
 .flexcolumn {
   display: inline-flex;
@@ -376,7 +389,22 @@ ul {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Nothing You Could Do", cursive;
   font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.crossedOut {
+  color: red;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+/* footer */
+
+footer {
+  height: 20px;
+  background: black;
+  color: white;
 }

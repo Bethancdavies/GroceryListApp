@@ -1,17 +1,13 @@
 import React, { Component } from "react";
-import firebase from "./firebase";
-// import Form from "./Form";
+import IndividualItem from "./IndividualItem";
 
 class GroceryList extends Component {
-  // function to remove items from grocery list, how to use a font awesome with a span to not have an error
-  removeItem = event => {
-    const dbRef = firebase.database().ref();
-    dbRef.child(event.target.id).remove();
-  };
-  // function to cross off item on the grocery list
-  crossOffItem = event => {
-    console.log("li is clicked, format me :)");
-  };
+  constructor() {
+    super();
+    this.state = {
+      listClass: "null"
+    };
+  }
 
   render() {
     // filtering array by category to properly display, filter then map over the array below
@@ -44,16 +40,10 @@ class GroceryList extends Component {
           <ul>
             {meatArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
@@ -62,16 +52,10 @@ class GroceryList extends Component {
           <ul>
             {fruitVegArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
@@ -80,16 +64,10 @@ class GroceryList extends Component {
           <ul>
             {dairyArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
@@ -98,16 +76,10 @@ class GroceryList extends Component {
           <ul>
             {dryGoodsArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
@@ -116,16 +88,10 @@ class GroceryList extends Component {
           <ul>
             {freezerItemsArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}{" "}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
@@ -134,20 +100,18 @@ class GroceryList extends Component {
           <ul>
             {miscArray.map(item => {
               return (
-                <li key={item.id} onClick={this.crossOffItem}>
-                  {item.groceryItem.itemName}{" "}
-                  <span
-                    id={item.id}
-                    className="removeSpan"
-                    onClick={this.removeItem}
-                  >
-                    🗑
-                  </span>
-                </li>
+                <IndividualItem
+                  itemNameProp={item.groceryItem.itemName}
+                  itemIdProp={item.id}
+                />
               );
             })}
           </ul>
         </div>
+        {/* clear list button still need to be functional */}
+        <button type="submit" onClick={this.clearList}>
+          Clear List
+        </button>
       </div>
     );
   }
