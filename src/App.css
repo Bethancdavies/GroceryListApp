@@ -234,7 +234,7 @@ html {
 
 html {
   background-color: #d8d8d8;
-  background-image: url(../assets/background.jpg);
+  background-image: url(/assets/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -336,7 +336,7 @@ label:focus {
   width: 100%;
   min-height: 70vh;
   max-height: fit-content;
-  background-image: url(../assets/paper.png);
+  background-image: url(/assets/paper.png);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
