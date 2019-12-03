@@ -20,7 +20,7 @@ class IndividualItem extends Component {
     const dbRef = firebase.database().ref();
     dbRef.child(event.target.id).remove();
   };
-  // RETURN sends this li to "GroceryList" component which then maps over each item in array individually
+  // RETURN sends this li to "GroceryList" component which then maps over each item in array individually. assigns a key to each individual li and attaches span and onClick for the above functions
   render() {
     return (
       <li
