@@ -367,6 +367,7 @@ li {
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 10px;
+  opacity: 1;
 }
 /* styling of on click features and buttons */
 .crossedOut {
@@ -394,7 +395,7 @@ button {
 }
 button:hover,
 button:focus {
-  background: #107515;
+  background: #9dbbd1;
   color: black;
   outline: #000 1px solid;
 }

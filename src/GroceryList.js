@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import IndividualItem from "./IndividualItem";
+import firebase from "./firebase";
 
 class GroceryList extends Component {
   constructor() {
@@ -8,7 +9,10 @@ class GroceryList extends Component {
       listClass: "null"
     };
   }
-
+  clearList = event => {
+    const dbRef = firebase.database().ref();
+    dbRef.set("");
+  };
   render() {
     // filtering array by category to properly display, filter then map over the array below
     const meatArray = this.props.newItemsArrayProp.filter((item, i) => {
@@ -30,6 +34,7 @@ class GroceryList extends Component {
       return item.groceryItem.category === "misc";
     });
 
+    // }
     return (
       // printing the arays from database in categories
 
@@ -118,3 +123,9 @@ class GroceryList extends Component {
 }
 
 export default GroceryList;
+
+//     const array = this.props.newItemsArrayProp;
+//     this.setState ({
+//       array: ''
+//     })
+// // }
