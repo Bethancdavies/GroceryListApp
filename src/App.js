@@ -158,6 +158,7 @@ class App extends Component {
 
           <GroceryList newItemsArrayProp={this.state.newItemsArray} />
         </div>
+
         <Footer />
       </div>
     );

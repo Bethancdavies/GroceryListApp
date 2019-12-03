@@ -9,6 +9,7 @@ class GroceryList extends Component {
       listClass: "null"
     };
   }
+  // clears the grocery list by emptying it on firebases end
   clearList = event => {
     const dbRef = firebase.database().ref();
     dbRef.set("");
@@ -36,7 +37,7 @@ class GroceryList extends Component {
 
     // }
     return (
-      // printing the arays from database in categories
+      // printing the arays from database in categories, pulling li/individual item from "individualItem" component
 
       <div className="groceryList">
         <div className="groceryBox">
@@ -113,9 +114,18 @@ class GroceryList extends Component {
             })}
           </ul>
         </div>
-        {/* clear list button still need to be functional */}
+        {/* {/* clear list button */}
         <button type="submit" className="clearList" onClick={this.clearList}>
           Clear List
+        </button>
+        {/* Print List button */}
+        <button
+          className="printButton"
+          type="submit"
+          value="print"
+          onClick={window.print}
+        >
+          🖨 Print List
         </button>
       </div>
     );
@@ -123,9 +133,3 @@ class GroceryList extends Component {
 }
 
 export default GroceryList;
-
-//     const array = this.props.newItemsArrayProp;
-//     this.setState ({
-//       array: ''
-//     })
-// // }

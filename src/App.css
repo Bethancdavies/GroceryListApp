@@ -406,7 +406,7 @@ button:focus {
 /* footer */
 
 footer {
-  height: 20px;
+  height: 30px;
   background: black;
   color: white;
   padding: 0;
@@ -415,7 +415,7 @@ footer {
 
 /* media queries */
 
-/* tablet format looks fine with minor wrapper adjustment, text fonts still appropriate */
+/* tablet format looks fine with minor wrapper adjustment, text fonts still appropriate on various screen sizes, keep same */
 @media only screen and (max-width: 901px) {
   .wrapper {
     width: 700px;
@@ -449,5 +449,28 @@ footer {
   }
   .groceryList {
     margin-top: 120px;
+  }
+}
+/* printing media */
+
+@media print {
+  button,
+  p,
+  fieldset,
+  span,
+  input {
+    display: none;
+  }
+  h1 {
+    font-size: 4rem;
+    margin: none;
+  }
+  li {
+    /* easier to read on print, style choice */
+    font-family: "Josefin Sans", sans-serif;
+  }
+  ul {
+    /* better use of printer space */
+    columns: 4;
   }
 }
