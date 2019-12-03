@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "efe8416585cd45cb036b80d1b44be0dc",
+    "revision": "713457b92d50298b8ac6222a88f2550c",
     "url": "/GroceryListApp/index.html"
   },
   {
-    "revision": "f276057b978d4c86ff1e",
-    "url": "/GroceryListApp/static/css/main.db210fa5.chunk.css"
+    "revision": "c369efdfa50e10218f89",
+    "url": "/GroceryListApp/static/css/main.4a0e4153.chunk.css"
   },
   {
     "revision": "def09745e12c99810a92",
     "url": "/GroceryListApp/static/js/2.f48ea0cf.chunk.js"
   },
   {
-    "revision": "f276057b978d4c86ff1e",
-    "url": "/GroceryListApp/static/js/main.e1541f19.chunk.js"
+    "revision": "c369efdfa50e10218f89",
+    "url": "/GroceryListApp/static/js/main.089fa09c.chunk.js"
   },
   {
     "revision": "24c1928c61c2535291f9",
