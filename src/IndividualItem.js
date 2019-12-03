@@ -8,17 +8,19 @@ class IndividualItem extends Component {
       listClass: "null"
     };
   }
+  // function to cross of item on list, attached to on click
   crossOffItem = () => {
     const crossy = this.state.listClass;
     this.setState({
       listClass: !crossy
     });
   };
+  // function to remove item from list, attached to on click
   removeItem = event => {
     const dbRef = firebase.database().ref();
     dbRef.child(event.target.id).remove();
   };
-
+  // RETURN sends this li to "GroceryList" component which then maps over each item in array individually
   render() {
     return (
       <li
@@ -33,7 +35,7 @@ class IndividualItem extends Component {
           onClick={this.removeItem}
         >
           🗑
-        </span>{" "}
+        </span>
       </li>
     );
   }

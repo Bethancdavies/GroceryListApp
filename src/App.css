@@ -362,7 +362,7 @@ ul {
 }
 
 li {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Nothing You Could Do", cursive;
   font-weight: 700;
   cursor: pointer;
@@ -434,6 +434,9 @@ footer {
   }
   h2 {
     padding-top: 60px;
+  }
+  li {
+    font-size: 1.7rem;
   }
 }
 
