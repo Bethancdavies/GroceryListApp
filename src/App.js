@@ -6,11 +6,6 @@ import firebase from "./firebase";
 import Swal from "sweetalert2";
 import "./App.css";
 
-// things to add :)
-
-// NEEDED (finish by saturday): error handling, styling (ensure list is not off page when a lot of items), delete item on click of span, cross off item on click
-// NICE TO HAVE(finish on sunday fishbowl): Option to print list and send list to email, final styling, quantities, STRETCH GOAL have user be able to login
-
 class App extends Component {
   constructor() {
     super();
